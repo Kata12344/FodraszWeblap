@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(251, 246, 247);
+    font-family: 'Lora', serif;
+}
+
+/* nav */
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav>li>a>img{
+    width: 200px;
+    border-radius: 5px;
+}
+
+.logo{
+    position: relative;
+    text-align: center;
+}
+.logo>p{
+    position: absolute;
+}
+p{
+    margin: 0;
+}
+.mintasJ{
+    border-right: 1px solid black;
+    padding: 10px;
+}
+
+.mintasB{
+    border-left: 1px solid black;
+    padding: 10px;
+}
+nav>li>a{
+    font-weight: bolder;
+    font-size: 20px;
+}
+nav, li, a{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 5px;
+    color: black;
+}
+
+/* nav vége */
+
+
+article{
+    margin: 10px;
+}
+
+article> p{
+    margin: 15px;
+    text-align: justify;
+}
+
+@media screen and (max-width:650px) {
+    body{width: 100%;}
+    nav>li>a{
+        font-size: 100%;
+    }
+    img{
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width:400px){
+    nav>li>a{
+        font-size: 13px;
+    }
+    
+}

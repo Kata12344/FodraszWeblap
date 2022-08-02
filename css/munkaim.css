@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+  }
+
+/* Előtte utána képek */
+.elotte-utana{
+    text-align: center;
+    display: flex;
+}
+.tarolo{
+    position: relative;
+    width: 400px;
+    margin: auto;
+    
+}
+
+.elottekep{
+    border-radius: 15px;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.utanakep{
+    border-radius: 15px;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.valtozas{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(251, 246, 247);
+}
+
+.tarolo:hover .valtozas{
+    opacity: 1;
+}
+
+@media(max-width: 650px){
+    .elotte-utana{
+        flex-direction: column
+    }
+    .tarolo{
+        width: auto;
+    }
+    .slideshow-tarolo{
+        width: auto;
+    }   
+}
+
+/* Slideshow */
+.slideshow-tarolo{
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+.slide{
+    display: none;
+}
+
+.elozo, .kovetkezo{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.kovetkezo{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.elozo:hover, .kovetkezo:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.szoveg{
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.pont{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .pont:hover {
+    background-color: #717171;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .7}
+    to {opacity: 1}
+}
+
+/* Esküvő kiállítás */
+.sor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.oszlop{
+    flex: 25%;
+    max-width: 25%;
+    margin: auto;
+}
+
+.oszlop img{
+    padding: 5px;
+    vertical-align: middle;
+    max-width: 300px;
+}
+
+@media screen and (max-width: 1000px) {
+    .oszlop {
+      flex: 100%;
+      max-width: 100%;
+    }
+    
+}
